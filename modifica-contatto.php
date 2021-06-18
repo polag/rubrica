@@ -50,6 +50,8 @@ $contatto = Rubrica::select_data($_GET['id']);
 
                 <label for="nome" class="form-label">Nome</label>
                 <input type="text" name="nome" id="nome" value="<?php echo $contatto[0]['nome'] ?>" class="form-control" required>
+            </div>
+            <div class="col">
                 <label for="telefono" class="form-label">Numero di telefono</label>
                 <input type="tel" name="telefono" id="telefono" value="<?php echo $contatto[0]['telefono'] ?>" class="form-control" required>
             </div>

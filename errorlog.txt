@@ -1,0 +1,20 @@
+
+FILE: ...\Paula\Desktop\xamp\htdocs\rubrica-paula\includes\FormHandle.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 3 | ERROR | Each class must be in a namespace of at least one level
+   |       | (a top-level vendor name)
+----------------------------------------------------------------------
+
+
+FILE: ...ers\Paula\Desktop\xamp\htdocs\rubrica-paula\includes\rubrica.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 3 | ERROR | Each class must be in a namespace of at least one level
+   |       | (a top-level vendor name)
+----------------------------------------------------------------------
+
+Time: 247ms; Memory: 8MB
+

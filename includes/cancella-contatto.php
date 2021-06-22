@@ -1,5 +1,5 @@
-<?php 
-include __DIR__.'/rubrica.php';
-include __DIR__ . '/util.php';
-Rubrica::delete_data($_GET['id']);
-?>
+<?php
+include __DIR__.'/FormHandle.php';
+include __DIR__.'/Rubrica.php';
+require __DIR__ . '/util.php';
+\DataHandling\Rubrica::deleteData($_GET['id']);

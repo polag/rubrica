@@ -1,14 +1,13 @@
 <?php
-include __DIR__ . '/FormHandle.php';
-include  __DIR__ . '/Rubrica.php';
+include_once __DIR__ . '/globals.php';
 
-$contactId  = $_GET['id'];
-if (isset($contactId)) {
+if (isset($_GET['id'])) {
     \DataHandling\Rubrica::updateData($_POST, $_GET['id']);
 } else {
-    try {
-        \DataHandling\Rubrica::insertData($_POST);
+    try {       
+        
+        \DataHandling\Rubrica::insertData($_POST, $_SESSION['userId']);
     } catch (Exception $e) {
-        echo "Exception: ", $e->getMessage(), "\n";
+        echo 'Exception: ', $e->getMessage(), "\n";
     }
 }

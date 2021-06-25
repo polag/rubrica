@@ -1,5 +1,9 @@
 <?php
-include __DIR__.'/FormHandle.php';
-include __DIR__.'/Rubrica.php';
-require __DIR__ . '/util.php';
-\DataHandling\Rubrica::deleteData($_GET['id']);
+include_once  __DIR__.'/globals.php';
+
+if(isset($_GET['id'])){
+    \DataHandling\Rubrica::deleteData($_GET['id'], null);
+}else{
+    \DataHandling\Rubrica::deleteData(null, $_SESSION['userId']);
+}
+

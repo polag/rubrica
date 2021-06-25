@@ -1,9 +1,8 @@
 <?php
+include_once __DIR__ . '/includes/globals.php';
 //phpcs: ignore Generic.Files.LineEndings
-include __DIR__ . '/includes/header.php';
-include __DIR__ . '/includes/util.php';
 if (isset($_GET['stato'])) {
-    show_alert("inserimento", $_GET['stato']);
+    \DataHandling\Utils\show_alert('inserimento', $_GET['stato']);
 }
 ?>
 <h1>Inserisci nuovo contatto </h1>
@@ -40,7 +39,7 @@ if (isset($_GET['stato'])) {
     </div>
     <input type="submit" value="Aggiungi Contatto" class="btn btn-dark">
 
-    <a href="./index.php" class="btn btn-outline-dark">Torna</a>
+    
 </form>
 </main>
 </body>

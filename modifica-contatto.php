@@ -1,15 +1,13 @@
 <?php
-require __DIR__ . '/includes/header.php';
-include __DIR__ . '/includes/FormHandle.php';
-require __DIR__ . '/includes/Rubrica.php';
-require __DIR__ . '/includes/util.php';
+include_once __DIR__ . '/includes/globals.php';
 $args = array(
     'id' => $_GET['id'],
+    'userId' => $_SESSION['userId']
 );
 $contatto = \DataHandling\Rubrica::selectData($args);
 if (count($contatto) > 0) :
     if (isset($_GET['stato'])) {
-        show_alert("modifica", $_GET['stato']);
+        \DataHandling\Utils\show_alert('modifica', $_GET['stato']);
     }
     ?>
 

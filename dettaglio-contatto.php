@@ -1,10 +1,8 @@
 <?php
-require __DIR__ . '/includes/header.php';
-include __DIR__ . '/includes/FormHandle.php';
-require __DIR__ . './includes/Rubrica.php';
-require __DIR__ . './includes/util.php';
-$args = array(
+include_once __DIR__ . '/includes/globals.php';
+$args     = array(
     'id' => $_GET['id'],
+    'userId' => $_SESSION['userId']
 );
 $contatto = \DataHandling\Rubrica::selectData($args);
 if (count($contatto) > 0) :
@@ -14,10 +12,10 @@ if (count($contatto) > 0) :
     <table class="table table-striped">
 
         <thead>
-            <?php echo get_table_head($contatto[0]); ?>
+            <?php echo \DataHandling\Utils\get_table_head($contatto[0]); ?>
         </thead>
         <tbody>
-            <?php echo get_table_body($contatto); ?>
+            <?php echo \DataHandling\Utils\get_table_body($contatto); ?>
         </tbody>
     </table>
 
